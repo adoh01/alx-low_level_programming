@@ -14,19 +14,26 @@ int main(void)
 
 	while (f <= '9')
 	{
-		s = '0';
+		s = f + 1;
 
 		while (s <= '9')
+		{
+
 			if (f != s)
 			{
-				putchar(f + '0');
-				putchar(s + '0');
-				putchar(',');
-				putchar(' ');
+				putchar(f);
+				putchar(s);
+				if (f != '8' || s != '9')
+				{
+					putchar(',');
+					putchar(' ');
+				}
 			}
 		s++;
-	}
+		}
+
 	f++;
+	}
 	putchar('\n');
 
 	return (0);
